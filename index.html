@@ -1,79 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Fullscreen Image Slider</title>
-        <!-- Import local Bootstrap CSS -->
-        <link
-            rel="stylesheet"
-            href="node_modules\bootstrap\dist\css\bootstrap.min.css"
-        />
-        <link rel="stylesheet" href="assect\style\style.css" />
-    </head>
-    <body>
-        <!-- Thanh dọc -->
-        <div class="vertical-bar">
-            <div class="vertical-text">This is a vertical text</div>
-            <div class="menu-trigger"></div>
-            <div class="menu">Menu Content</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Image Slider</title>
+
+    <!-- Import Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="vertical-bar">
+        <div class="vertical-text">This is a vertical text</div>
+        <div class="menu-trigger"></div>
+
+        <!-- Menu -->
+        <nav class="menu">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li>
+                    <a href="#"><i class="fas fa-folder"></i> Projects <i class="fas fa-chevron-right"></i></a>
+                    <ul class="submenu">
+                        <li><a href="#">🔹 Project 1</a></li>
+                        <li><a href="#">🔹 Project 2</a></li>
+                        <li><a href="#">🔹 Project 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fas fa-phone"></i> Contact</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+            <a href="#" class="book-btn">Book Your Stay</a>
+        </nav>
+    </div>
+
+    <!-- Slider -->
+    <section class="splide">
+        <div class="fixed-text"><p>This is a fixed text</p></div>
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide" style="background-image: url('https://images.pexels.com/photos/1198802/pexels-photo-1198802.jpeg');"></li>
+                <li class="splide__slide" style="background-image: url('https://images.pexels.com/photos/30922300/pexels-photo-30922300.jpeg');"></li>
+            </ul>
         </div>
-        <!-- Slider -->
-        <div class="splide">
-            <!-- Thẻ div chứa văn bản -->
-            <div class="fixed-text">
-                <p>This is a fixed text</p>
-            </div>
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide" style="background-image: url('https://images.pexels.com/photos/1198802/pexels-photo-1198802.jpeg');"></li>
-                    <li class="splide__slide" style="background-image: url('https://images.pexels.com/photos/30922300/pexels-photo-30922300.jpeg');"></li>
-                </ul>
-            </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mt-5">
+        <div class="align-items-center">
+            <p>The hallmark of boutique luxury charm Experience hospitality...</p>
         </div>
-        <!-- Main content -->
-        <div class="container mt-5">
-            <div class="align-items-center">
-                The hallmark of
-                boutique luxury charm
-                Experience hospitality that transcends the ordinary – moving beyond conventional services to create tailor-made moments. Immerse in a harmonious blend of sophistication, tailored luxury, and bespoke experiences that will take your stay to new heights.
-            </div>
-        </div>
+    </main>
 
-        <!-- Import local Bootstrap JS as module -->
-        <script type="module">
-            import 'node_modules\bootstrap\dist\js\bootstrap.esm.min.js';
-        </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const slides = document.querySelectorAll('.splide__slide');
-                let currentSlide = 0;
+    <!-- Import Bootstrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
-                function showSlide(index) {
-                    slides.forEach((slide, i) => {
-                        if (i === index) {
-                            slide.classList.add('active');
-                        } else {
-                            slide.classList.remove('active');
-                        }
-                    });
-                }
-
-                function nextSlide() {
-                    slides[currentSlide].classList.add('fade-out');
-                    slides[currentSlide].classList.remove(
-                        'active',
-                        'fade-out'
-                    );
-                    currentSlide = (currentSlide + 1) % slides.length;
-                    showSlide(currentSlide);
-                    // setTimeout(() => {
-                    // }, 4000); // Thời gian chờ để hoàn thành hiệu ứng fade-out
-                }
-
-                showSlide(currentSlide);
-                setInterval(nextSlide, 9000); // Thay đổi slide sau mỗi 5 giây
-            });
-        </script>
-    </body>
+</body>
 </html>

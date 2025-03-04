@@ -49,6 +49,7 @@ body, html {
     transform: scale(1);
 }
 
+/* Sidebar cố định */
 .vertical-bar {
     position: fixed;
     top: 0;
@@ -61,9 +62,10 @@ body, html {
     justify-content: center;
     z-index: 1000;
     padding-bottom: 6rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Nút hover */
+/* Nút mở menu */
 .menu-trigger {
     position: absolute;
     top: 50%;
@@ -81,31 +83,41 @@ body, html {
     border-radius: 5px;
     cursor: pointer;
     z-index: 1001;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hiệu ứng hover cho menu-trigger */
+.menu-trigger:hover {
+    background-color: darkviolet;
+    box-shadow: 0px 0px 10px rgba(138, 43, 226, 0.6);
+}
+
+/* Mũi tên chuyển đổi */
 .menu-trigger::before {
     content: '>>';
+    transition: content 0.3s ease;
 }
 
-/* Menu mặc định bị ẩn */
+/* Menu chính */
 .menu {
     position: absolute;
     top: 0;
     left: 100%; /* Đẩy menu ra ngoài thanh */
     height: 100vh;
-    width: 350px;
+    width: 300px;
     border-left: 2px solid rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 18px;
     font-weight: bold;
     opacity: 0;
     visibility: hidden;
     transform: translateX(20px);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 1s ease;
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Khi hover vào menu-trigger hoặc menu thì hiển thị menu */
@@ -121,8 +133,97 @@ body, html {
     content: '<<';
 }
 
+/* Tạo danh sách menu */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
 
+/* Menu chính */
+.menu ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: relative; /* Giữ submenu đúng vị trí */
+}
 
+/* Hiệu ứng hover cho mục menu */
+.menu ul li:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Căn text về phía trên trái */
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: flex-start; /* Căn text lên trên */
+    justify-content: flex-start; /* Căn về bên trái */
+    gap: 10px;
+    font-size: 16px;
+    padding: 5px 0; /* Giúp text không bị dính vào icon */
+}
+
+/* Điều chỉnh icon */
+.menu ul li a i {
+    font-size: 20px;
+    color: blueviolet;
+    align-self: flex-start; /* Đưa icon lên đầu dòng */
+}
+
+/* Submenu ẩn mặc định */
+.menu ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: white;
+    width: 200px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+/* Hiển thị submenu khi hover */
+.menu ul li:hover .submenu {
+    display: block;
+}
+
+/* Mục trong submenu */
+.menu ul li .submenu li {
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+/* Hover submenu */
+.menu ul li .submenu li:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.menu .book-btn {
+    display: inline-block;
+    background: blueviolet;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 10px rgba(138, 43, 226, 0.3);
+    margin-top: auto
+}
+
+/* Hiệu ứng hover cho button */
+.menu .book-btn:hover {
+    background: darkviolet;
+    transform: scale(1.05);
+}
 
 .vertical-text {
     color: rgb(0, 0, 0);
