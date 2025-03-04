@@ -1,8 +1,12 @@
+:root {
+    --bar-width: 80px;
+}
 body, html {
     margin: 0;
     padding: 0;
     height: auto;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 .splide {
@@ -39,6 +43,18 @@ body, html {
     transform: scale(1);
 }
 
+.splide__track::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+
 .splide__slide.active {
     opacity: 1;
     transform: scale(1.2);
@@ -55,7 +71,7 @@ body, html {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 80px;
+    width:  var(--bar-width);
     background-color: rgb(255, 255, 255);
     display: flex;
     align-items: end;
@@ -250,6 +266,23 @@ body, html {
     font-size: 24px;
     z-index: 1000;
     pointer-events: none;
+    .image-container {
+        position: relative;
+        width: 100%;
+        max-width: 300px; /* Điều chỉnh kích thước ảnh nhỏ hơn */
+        margin: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image-container img {
+        width: 100%; /* Ảnh co giãn theo kích thước container */
+        height: auto; /* Giữ nguyên tỷ lệ */
+        display: block;
+        object-fit: contain; /* Hiển thị toàn bộ ảnh mà không bị cắt */
+    }
 }
 
 .splide {
@@ -257,6 +290,159 @@ body, html {
     z-index: 1;
 }
 .fixed-text p {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-weight: bold;
+}
+
+.align-items-center{
+    text-align: center;
+}
+.align-items-center.title{
+    max-width: 40vw;
+    margin: auto;
+}
+.container-fluid{
+    padding-left: var(--bar-width);
+}
+.center-flexbox{
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100%; /* Đảm bảo phần tử cha có chiều cao */
+} 
+
+.card-home-hotel {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Khoảng cách giữa các card */
+}
+
+.card-home-hotel .card {
+    border: none;
+    overflow: hidden;
+    /* border-radius: 10px; */
+}
+
+/* Định dạng khung chứa ảnh */
+.card-home-hotel .card-img-wrapper {
+    width: 100%;
+    height: 40vh; /* Chiều cao cố định */
+    overflow: hidden;
+    position: relative;
+    /* border-radius: 10px; */
+}
+
+/* Ảnh có hiệu ứng zoom */
+.card-home-hotel .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh luôn lấp đầy khung */
+    transition: transform 0.5s ease;
+}
+
+/* Hover vào card thì ảnh zoom */
+.card-home-hotel .card:hover .card-img-wrapper img {
+    transform: scale(1.1); /* Zoom ảnh nhưng giữ nguyên khung */
+}
+
+/* Hiệu ứng gạch chân text */
+.card-home-hotel .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.card-home-hotel .card-title::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #600000; /* Màu gạch chân */
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.card-home-hotel .card-title:hover::after {
+    width: 100%; /* Hiện gạch chân khi hover */
+}
+
+.card-home-hotel .card-category {
+    font-size: 14px;
+    color: #a52a2a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-home-hotel .book-btn {
+    display: inline-block;
+    background: blueviolet;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: auto;
+}
+
+.full-width-bg {
+    width: 100vw; /* Đảm bảo chiều rộng bằng 100% viewport */
+    max-width: 100vw;
+    height: 100vh; /* Hoặc điều chỉnh theo nhu cầu */
+    background-color: #F2F3F5; /* Màu nền */
+    margin-left: calc(-50vw + 50%); /* Căn giữa phần tử để full width */
+}
+
+.hospitality-section {
+    background-color: #F2F3F5;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hospitality-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.hospitality-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.hospitality-title,
+.hospitality-text {
+    text-align: center;
+}
+
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -25px auto 15px; /* Đẩy icon xuống */
+    position: relative;
+    z-index: 10; /* Đảm bảo icon luôn nổi trên */
+}
+
+.icon-circle img {
+    width: 24px;
+    height: 24px;
+}
+
+.hospitality-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.hospitality-text {
+    color: #666;
+    font-size: 14px;
 }
