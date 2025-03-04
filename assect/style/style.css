@@ -1,0 +1,161 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow: auto;
+}
+
+.splide {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.splide__track {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.splide__list {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+.splide__slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 5s ease-in-out, transform 9s ease-in-out;
+    transform: scale(1);
+}
+
+.splide__slide.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.splide__slide.next {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.vertical-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    z-index: 1000;
+    padding-bottom: 6rem;
+}
+
+/* Nút hover */
+.menu-trigger {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    
+    height: 50px;
+    width: 50px;
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-trigger::before {
+    content: '>>';
+}
+
+/* Menu mặc định bị ẩn */
+.menu {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Đẩy menu ra ngoài thanh */
+    height: 100vh;
+    width: 350px;
+    border-left: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 1s ease;
+}
+
+/* Khi hover vào menu-trigger hoặc menu thì hiển thị menu */
+.menu-trigger:hover + .menu,
+.menu:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Thay đổi nội dung khi hover */
+.menu-trigger:hover::before {
+    content: '<<';
+}
+
+
+
+
+.vertical-text {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    transform: rotate(90deg);
+    white-space: nowrap;
+}
+
+.splide {
+    width: calc(100vw - 50px);
+    height: 100vh;
+    position: relative;
+    margin-left: 50px;
+}
+
+
+.fixed-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.splide {
+    position: relative;
+    z-index: 1;
+}
+.fixed-text p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
