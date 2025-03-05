@@ -90,13 +90,14 @@ body, html {
     
     height: 50px;
     width: 50px;
-    background-color: blueviolet;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 100%;
+    border: 1px solid rgb(139, 139, 139);
     cursor: pointer;
     z-index: 1001;
     transition: background 0.3s ease, box-shadow 0.3s ease;
@@ -104,7 +105,7 @@ body, html {
 
 /* Hiệu ứng hover cho menu-trigger */
 .menu-trigger:hover {
-    background-color: darkviolet;
+    background-color: rgb(245, 245, 245);
     box-shadow: 0px 0px 10px rgba(138, 43, 226, 0.6);
 }
 
@@ -242,10 +243,11 @@ body, html {
 }
 
 .vertical-text {
-    color: rgb(0, 0, 0);
+    color: rgb(128, 128, 128);
     font-size: 16px;
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     white-space: nowrap;
+    
 }
 
 .splide {
@@ -464,7 +466,7 @@ body, html {
     height: auto;
 }
 .text-container {
-    padding: 40px;
+    /* padding: 40px; */
     padding-bottom: 0px;
     display: flex;
     flex-direction: column;
@@ -508,4 +510,12 @@ body, html {
 
 .services .text-title:hover::after {
     width: 100%; /* Hiện gạch chân khi hover */
+}
+
+.home-map{
+    /* position: relative; */
+}
+.logo-list img{
+    height: 100px;
+    width: auto;
 }
