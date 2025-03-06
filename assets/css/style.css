@@ -68,8 +68,8 @@ body, html {
     /* width: 0px; */
     width: 0;
     opacity: 0;
-    transform: translateX(20px);
-    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+    /* transform: translateX(20px); */
+    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease, width 0.5s ease;
     background: rgba(255, 255, 255, 0.741);
     backdrop-filter: blur(10px);
     overflow: hidden;
@@ -163,7 +163,7 @@ main,footer{
 }
 @media (min-width: 992px) {
     main,footer{
-        margin-left: 100px;
+        margin-left: 80px;
     }
 }
 .news-card{
@@ -183,4 +183,12 @@ main,footer{
 .menu-link{
     max-height:90vh;
     overflow-y: scroll;
+    overflow-x: hidden;
+}
+.float-button{
+    top: 10vh;
+    right: 5vw;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.741) !important;
+    transition: all 0.3s ease;
 }

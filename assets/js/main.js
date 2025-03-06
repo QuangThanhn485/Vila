@@ -26,12 +26,12 @@ function embedIframe() {
 function toggleMenu() {
     const menu = document.querySelector('.menu');
     menu.style.opacity = menu.style.opacity === '1' ? '0' : '1';
-    menu.style.transform = menu.style.transform === 'translateX(0px)' ? 'translateX(20px)' : 'translateX(0px)';
+    // menu.style.transform = menu.style.transform === 'translateX(0px)' ? 'translateX(20px)' : 'translateX(0px)';
     menu.style.visibility = menu.style.visibility === 'visible' ? 'hidden' : 'visible';
     // menu.style.width = menu.style.width === '400px' ? '0' : '400px';
     if (menu.style.width != '0px' &&  menu.style.width != '')
     {
-        setTimeout(()=>menu.style.width='0',500)
+        menu.style.width = '0';
     }
     else {
         menu.style.width = 'min(400px,100vw)'
