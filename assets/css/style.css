@@ -9,19 +9,17 @@ body, html {
     overflow-x: hidden;
 }
 
-.splide {
-    width: 100vw;
-    height: 100vh;
+.slide {
     position: relative;
 }
 
-.splide__track {
+.slide__track {
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
-.splide__list {
+.slide__list {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -30,7 +28,7 @@ body, html {
     position: relative;
 }
 
-.splide__slide {
+.slide__slide {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -43,7 +41,7 @@ body, html {
     transform: scale(1);
 }
 
-.splide__track::before {
+.slide__track::before {
     content: "";
     position: absolute;
     top: 0;
@@ -55,467 +53,134 @@ body, html {
 }
 
 
-.splide__slide.active {
+.slide__slide.active {
     opacity: 1;
     transform: scale(1.2);
 }
 
-.splide__slide.next {
+.slide__slide.next {
     opacity: 1;
     transform: scale(1);
 }
 
-/* Sidebar cố định */
-.vertical-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width:  var(--bar-width);
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    z-index: 1000;
-    padding-bottom: 6rem;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-}
 
-/* Nút mở menu */
-.menu-trigger {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(50%, -50%);
-    
-    height: 50px;
-    width: 50px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    border-radius: 100%;
-    border: 1px solid rgb(139, 139, 139);
-    cursor: pointer;
-    z-index: 1001;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hiệu ứng hover cho menu-trigger */
-.menu-trigger:hover {
-    background-color: rgb(245, 245, 245);
-    box-shadow: 0px 0px 10px rgba(138, 43, 226, 0.6);
-}
-
-/* Mũi tên chuyển đổi */
-.menu-trigger::before {
-    content: '>>';
-    transition: content 0.3s ease;
-}
-
-/* Menu chính */
 .menu {
-    position: absolute;
-    top: 0;
-    left: 100%; /* Đẩy menu ra ngoài thanh */
-    height: 100vh;
-    width: 300px;
-    border-left: 2px solid rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    font-size: 18px;
-    font-weight: bold;
+    /* width: 0px; */
+    width: 0;
     opacity: 0;
-    visibility: hidden;
     transform: translateX(20px);
     transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
-    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.741);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    text-wrap: nowrap;
+    
 }
 
-/* Khi hover vào menu-trigger hoặc menu thì hiển thị menu */
-.menu-trigger:hover + .menu,
-.menu:hover {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
-}
-
-/* Thay đổi nội dung khi hover */
-.menu-trigger:hover::before {
-    content: '<<';
-}
-
-/* Tạo danh sách menu */
-.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-/* Menu chính */
-.menu ul li {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background 0.3s ease;
-    position: relative; /* Giữ submenu đúng vị trí */
-}
-
-/* Hiệu ứng hover cho mục menu */
-.menu ul li:hover {
-    background: rgba(0, 0, 0, 0.05);
-}
-
-/* Căn text về phía trên trái */
-.menu ul li a {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    align-items: flex-start; /* Căn text lên trên */
-    justify-content: flex-start; /* Căn về bên trái */
-    gap: 10px;
-    font-size: 16px;
-    padding: 5px 0; /* Giúp text không bị dính vào icon */
-}
-
-/* Điều chỉnh icon */
-.menu ul li a i {
-    font-size: 20px;
-    color: blueviolet;
-    align-self: flex-start; /* Đưa icon lên đầu dòng */
-}
-
-/* Submenu ẩn mặc định */
-.menu ul li .submenu {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    background: white;
-    width: 200px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 10px 0;
-}
-
-/* Hiển thị submenu khi hover */
-.menu ul li:hover .submenu {
-    display: block;
-}
-
-/* Mục trong submenu */
-.menu ul li .submenu li {
-    padding: 10px 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease;
-}
-
-/* Hover submenu */
-.menu ul li .submenu li:hover {
-    background: rgba(0, 0, 0, 0.05);
-}
-
-.menu .book-btn {
-    display: inline-block;
-    background: blueviolet;
-    color: white;
-    text-align: center;
-    font-size: 16px;
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease, transform 0.2s ease;
-    box-shadow: 0px 4px 10px rgba(138, 43, 226, 0.3);
-    margin-top: auto
-}
-
-/* Hiệu ứng hover cho button */
-.menu .book-btn:hover {
-    background: darkviolet;
-    transform: scale(1.05);
-}
 
 .vertical-text {
-    color: rgb(128, 128, 128);
-    font-size: 16px;
-    transform: rotate(-90deg);
+    writing-mode:sideways-lr;
+    text-orientation: mixed;
     white-space: nowrap;
-    
-}
-
-.splide {
-    width: calc(100vw - 50px);
-    height: 100vh;
-    position: relative;
-    margin-left: 50px;
 }
 
 
-.fixed-text {
+main{
+    gap:100px;
+}
+
+main,footer{
+    margin-left: 0;
+}
+
+.room-hall img{
+    transition: all ease-in-out .3s ;
+}
+.room-hall h4:after{
+    transition: all ease-in-out .3s ;
+    overflow: hidden;
+    text-wrap: nowrap;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-size: 24px;
-    z-index: 1000;
-    pointer-events: none;
-    .image-container {
-        position: relative;
-        width: 100%;
-        max-width: 300px; /* Điều chỉnh kích thước ảnh nhỏ hơn */
-        margin: auto;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .image-container img {
-        width: 100%; /* Ảnh co giãn theo kích thước container */
-        height: auto; /* Giữ nguyên tỷ lệ */
-        display: block;
-        object-fit: contain; /* Hiển thị toàn bộ ảnh mà không bị cắt */
-    }
-}
-
-.splide {
-    position: relative;
-    z-index: 1;
-}
-.fixed-text p {
-    font-weight: bold;
-}
-
-.align-items-center{
-    text-align: center;
-}
-.align-items-center.title{
-    max-width: 40vw;
-    margin: auto;
-}
-.container-fluid{
-    padding-left: var(--bar-width);
-}
-.center-flexbox{
-    display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: center; /* Căn giữa theo chiều dọc */
-    height: 100%; /* Đảm bảo phần tử cha có chiều cao */
-} 
-
-.card-home-hotel {
-    display: flex;
-    justify-content: center;
-    /* gap: 30px; */
-}
-
-.card-home-hotel .card {
-    border: none;
-    overflow: hidden;
-    /* border-radius: 10px; */
-}
-
-/* Định dạng khung chứa ảnh */
-.card-home-hotel .card-img-wrapper {
-    width: 100%;
-    height: 40vh; /* Chiều cao cố định */
-    overflow: hidden;
-    position: relative;
-    /* border-radius: 10px; */
-}
-
-/* Ảnh có hiệu ứng zoom */
-.card-home-hotel .card-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Đảm bảo ảnh luôn lấp đầy khung */
-    transition: transform 0.5s ease;
-}
-
-/* Hover vào card thì ảnh zoom */
-.card-home-hotel .card:hover .card-img-wrapper img {
-    transform: scale(1.1); /* Zoom ảnh nhưng giữ nguyên khung */
-}
-/* Hover vào card thì ảnh zoom */
-.card-home-hotel .card:hover .card-title::after {
-    width: 100%; /* Hiện gạch chân khi hover */
-}
-
-/* Hiệu ứng gạch chân text */
-.card-home-hotel .card-title {
-    font-size: 20px;
-    font-weight: bold;
-    position: relative;
-    display: inline-block;
-}
-
-.card-home-hotel .card-title::after {
-    content: "";
-    display: block;
     width: 0;
-    height: 2px;
-    background: #600000; /* Màu gạch chân */
-    transition: width 0.5s ease-in-out;
-    position: absolute;
-    bottom: -5px;
+    color: #600000;
+    border-bottom: 2px solid #600000;
+    top: 0;
     left: 0;
+    height: 130%;
+    content: attr(data-text);
 }
-
-.card-home-hotel .card-title:hover::after {
-    width: 100%; /* Hiện gạch chân khi hover */
+.room-hall:hover img{
+    scale: 1.1;
 }
-
-.card-home-hotel .card-category {
-    font-size: 14px;
-    color: #a52a2a;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.card-home-hotel .book-btn {
-    display: inline-block;
-    background: blueviolet;
-    color: white;
-    text-align: center;
-    font-size: 16px;
-    padding: 12px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    margin: auto;
-}
-
-.full-width-bg {
-    width: 100vw; /* Đảm bảo chiều rộng bằng 100% viewport */
-    max-width: 100vw;
-    height: 100%;
-    background-color: #F2F3F5; /* Màu nền */
-    margin-left: calc(-50vw + 50%);
-}
-
-.hospitality-section {
-    background-color: #F2F3F5;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.hospitality-card {
-    position: relative;
-    overflow: hidden;
-}
-
-.hospitality-card img {
+.room-hall:hover h4:after{
     width: 100%;
-    height: auto;
-    object-fit: cover;
 }
-.hospitality-title,
-.hospitality-text {
-    text-align: center;
+.card-icon{
+    background:rgba(0,0,0,0.50);
+    backdrop-filter: blur(10px)
 }
-
-
-.icon-circle {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: -25px auto 15px; /* Đẩy icon xuống */
+.embed-area
+{
+    background-image: url(https://byvn.net/X66O) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* filter: grayscale(0.2); */
+}
+.embed-area .play-button
+{
+    background: #40404063;
+}
+.embed-area .play-button i{
+    font-size: 10rem;
+    color: white;
+}
+.hover-custom{
     position: relative;
-    z-index: 10; /* Đảm bảo icon luôn nổi trên */
 }
-
-.icon-circle img {
-    width: 24px;
-    height: 24px;
-}
-
-.hospitality-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.hospitality-text {
-    color: #666;
-    font-size: 14px;
-}
-
-
-.content-container {
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
-.image-container img {
-    padding-top: 40px;
-    max-width: 100%;
-    min-height: 80vh;
-    height: auto;
-}
-.text-container {
-    /* padding: 40px; */
-    padding-bottom: 0px;
-    display: flex;
-    flex-direction: column;
-}
-.text-container h2 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-.text-container p {
-    font-size: 1rem;
-    color: #666;
-}
-.services {
-    margin-top: auto;
-}
-.services div {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-/* Hiệu ứng gạch chân text */
-.services .text-title {
-    font-size: 20px;
-    font-weight: bold;
-    position: relative;
-    display: inline-block;
-}
-
-.services .text-title::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #600000; /* Màu gạch chân */
-    transition: width 0.5s ease-in-out;
+.hover-custom:after{
+    transition: all ease-in-out .3s ;
+    overflow: hidden;
+    text-wrap: nowrap;
     position: absolute;
-    bottom: -5px;
-    left: 10px;
+    width: 0;
+    color: #600000;
+    border-bottom: 2px solid #600000;
+    top: 0;
+    left: 0;
+    height: 130%;
+    content: attr(data-text);
+}
+.hover-custom:hover:after{
+    width: 100%;
+}
+.social-link div{
+    transition: all ease-in-out .15s;
+    cursor: pointer;
+}
+.social-link div:hover{
+    scale: 1.1;
+}
+@media (min-width: 992px) {
+    main,footer{
+        margin-left: 100px;
+    }
+}
+.news-card{
+    transition: all ease .3s;
+    cursor: pointer;
+}
+.news-card:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.176);
+}
+.collapse-icon div {
+    transition: transform 0.3s ease;
 }
 
-.services .text-title:hover::after {
-    width: 100%; /* Hiện gạch chân khi hover */
+.collapse-icon:not(.collapsed) div {
+    transform: rotate(90deg);
 }
-
-.home-map{
-    /* position: relative; */
-}
-.logo-list img{
-    height: 100px;
-    width: auto;
+.menu-link{
+    max-height:90vh;
+    overflow-y: scroll;
 }

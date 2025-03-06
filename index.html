@@ -3,219 +3,427 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullscreen Image Slider</title>
+    <title>PALM VILLA NHA TRANG</title>
 
     <!-- Import Bootstrap CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.bundle.css">
+    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Sidebar -->
-    <div class="vertical-bar">
-        <div class="vertical-text fw-bold">+84 999 999 999 <br> This is a vertical text</div>
-        <div class="menu-trigger"></div>
-        <!-- Menu -->
-        <nav class="menu">
-            <h3>Menu</h3>
-            <ul>
-                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-                <li>
-                    <a href="#"><i class="fas fa-folder"></i> Projects <i class="fas fa-chevron-right"></i></a>
-                    <ul class="submenu">
-                        <li><a href="#">🔹 Project 1</a></li>
-                        <li><a href="#">🔹 Project 2</a></li>
-                        <li><a href="#">🔹 Project 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><i class="fas fa-phone"></i> Contact</a></li>
-                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
-            </ul>
-            <a href="#" class="book-btn">Book Your Stay</a>
-        </nav>
+    <div class="top-0 end-0 z-4 d-flex flex-column flex-center gap-3 px-5 py-2 position-fixed">
+        <a href="">
+            <img class="w-20px" src="https://cdn.gtranslate.net/flags/svg/vi.svg" alt="" srcset="">
+        </a>
+        <a href="">
+            <img class="w-20px" src="https://cdn.gtranslate.net/flags/svg/en.svg" alt="" srcset="">
+        </a>
+        <a href="">
+            <img class="w-20px" src="https://cdn.gtranslate.net/flags/svg/ko.svg" alt="" srcset="">
+        </a>
     </div>
-
-    <!-- Slider -->
-    <section class="splide">
-        <div class="fixed-text"> <img class="image-container" src="assets\image\PALMS VILLA.png" alt=""></div>
-        <div class="splide__track">
-            <ul class="splide__list">
-                <li class="splide__slide" style="background-image: url('https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/432839634_806742068158087_1810834956137411444_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ij_8kgkkThwQ7kNvgEep6hk&_nc_oc=AdgRmMUY4lUxLdKa8_uycQoxFIEWnodXoKO2ojfP_SpMT_YrLJgAe7JpS3yzfAZcs4w&_nc_zt=23&_nc_ht=scontent.fdad3-5.fna&_nc_gid=A74gUhnuMgzjjv-eLWtBBpi&oh=00_AYBqotgSNQ8Uv8-eWKYjZTtas_pWrMrmT1qGs0l8yhNd_Q&oe=67CD9E9C');"></li>
-                <li class="splide__slide" style="background-image: url('https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/432699602_798937722271855_7028572556335280552_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=CE7_04_8mscQ7kNvgEo5fIz&_nc_oc=AdiYu-MdXp0qkHYqjmary-gPR-4IP941jdCvES-e_wWEbbtxN471jPzoHymFCapJv-8&_nc_zt=23&_nc_ht=scontent.fdad3-5.fna&_nc_gid=ABwwGwGl7HINnBn4hzGO1x9&oh=00_AYCMCloWUUOksv_7I27TjPbxcca0orOzoP5EMyo84Cytdg&oe=67CDB9C0');"></li>
-                <li class="splide__slide" style="background-image: url('https://scontent.fdad3-1.fna.fbcdn.net/v/t39.30808-6/428491275_787405860091708_5995566649257455143_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=u6m5sTcA-k8Q7kNvgFLh7aG&_nc_oc=AdhDaQQfT0H5OAdYOSIfBcX7HNwhlnOx9ed8mW7Yn4Kw9S1msgC6aoQYmu-iu0gRJYI&_nc_zt=23&_nc_ht=scontent.fdad3-1.fna&_nc_gid=AaBVCaHlDtSY8-8rqJBRDwK&oh=00_AYA39SL_Fp8Obni9tZj8TT4z8WIDF6-g_apIczzuyF3JQA&oe=67CD923E');"></li>
-                <li class="splide__slide" style="background-image: url('https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/425335573_787405900091704_2073836977510258103_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=r-1JpVuvBw4Q7kNvgHnzQ6H&_nc_oc=AdhtrgdJbKstt8nEE0-wqL84RRS7KV40wyHT-ZJz6yafrJXFXcyoKM_w3RqMbSwp4V8&_nc_zt=23&_nc_ht=scontent.fdad3-5.fna&_nc_gid=AcUihjAauKXnhHES3GqQj39&oh=00_AYCSAyu0T36_DxxU1MMlC4ek3Ia-fTHkNg6Pgg3MHd1GFg&oe=67CDC25E');"></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <main class="container container-fluid mt-5">
-        <div class="align-items-center title">
-            <div>
-                <h2>The hallmark of <br/>
-                    boutique luxury charm</h2>
-            </div>
-            <div class="mt-2">
-                <p>Experience hospitality that transcends the ordinary – moving beyond conventional services to create tailor-made moments. Immerse in a harmonious blend of sophistication, tailored luxury, and bespoke experiences that will take your stay to new heights</p>
-            </div>
-        </div>
-        <div class="my-5">
-            <div class="row card-home-hotel">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-img-wrapper">
-                            <img src="https://images.pexels.com/photos/1198802/pexels-photo-1198802.jpeg" class="card-img-top" alt="Villa Sông Saigon">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">VILLA SÔNG SAIGON</h5>
-                            <p class="card-category">HOTELS</p>
-                        </div>
-                    </div>
-                </div>
-        
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-img-wrapper">
-                            <img src="https://images.pexels.com/photos/30922300/pexels-photo-30922300.jpeg" class="card-img-top" alt="SÔMA HIDEAWAYS">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="card-title">SÔMA HIDEAWAYS</h5>
-                            <p class="card-category">SUITES</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 center-flexbox">
-                    <a href="#" class="book-btn">Book Your Stay</a>
-                </div>
-            </div>
-        </div>
-    </main>
-    <div class="full-width-bg my-5 pt-5">
-        <div class="container container-fluid">
-            <h2 class="text-center mb-5">HOSPITALITY</h2>
-            <div class="row pb-5">
-                <!-- Restaurant & Bar -->
-                <div class="col-md-4">
-                    <div class="hospitality-card">
-                        <img src="http://villasong.com/wp-content/uploads/2024/01/BSV526-2.png" alt="Restaurant & Bar">
-                    </div>
-                    <div class="icon-circle">
-                        <img src="icon1.png" alt="Icon">
-                    </div>
-                    <h4 class="hospitality-title">RESTAURANT & BAR</h4>
-                    <p class="hospitality-text">Culinary Symphony at Bistro Sông Vie</p>
-                </div>
-    
-                <!-- Banquet & Events -->
-                <div class="col-md-4">
-                    <div class="hospitality-card">
-                        <img src="http://villasong.com/wp-content/uploads/2024/01/BSV526-2.png" alt="Banquet & Events">
-                    </div>
-                    <div class="icon-circle">
-                        <img src="icon2.png" alt="Icon">
-                    </div>
-                    <h4 class="hospitality-title">BANQUET & EVENTS</h4>
-                    <p class="hospitality-text">Create Timeless Memories at Villa Song</p>
-                </div>
-    
-                <!-- Excursions -->
-                <div class="col-md-4">
-                    <div class="hospitality-card">
-                        <img src="http://villasong.com/wp-content/uploads/2024/01/BSV526-2.png" alt="Excursions">
-                    </div>
-                    <div class="icon-circle">
-                        <img src="icon3.png" alt="Icon">
-                    </div>
-                    <h4 class="hospitality-title">EXCURSIONS</h4>
-                    <p class="hospitality-text">Seize the Moment with Exquisite Escapes</p>
-                </div>
-            </div>
+    <div class="header-bar w-100 bg-primary py-5 px-10 d-flex d-lg-none">
+        <img src="assets/image/PALMS VILLA.png" class="w-100 mw-80px" alt="" srcset="">
+        <div class="ms-auto d-flex flex-center pe-8 cursor-pointer">
+            <a onclick="toggleMenu()" >
+                <i class="fi fi-rr-menu-burger fs-3qx text-light"></i>
+            </a>
+            
         </div>
     </div>
-    <!-- Main Content -->
-    <main class="container container-fluid mt-5">
-        <div class="my-5">
-            <div class="row">
-                <div class="col-12 col-lg-6 image-container">
-                    <img src="https://villasong.com/wp-content/uploads/2023/12/Thao-Dien-1-e1703858325714.jpg" alt="City View">
+    <div class="position-fixed top-0 start-0 d-flex z-3 ">
+        <div class="w-100px d-lg-flex d-none align-items-end justify-content-center pb-20 bg-gray-100 vh-100 border-custom z-2 flex-column">
+            <div class="w-100 d-flex flex-center py-10 cursor-pointer">
+                <a onclick="toggleMenu()" >
+                    <i class="fi fi-rr-menu-burger fs-3qx text-primary"></i>
+                </a>
+            </div>
+            <div class="w-100 h-100 d-flex justify-content-center">
+                <div class="vertical-text fw-bold text-gray-500 fs-5">+84 999 999 999 <br> This is a vertical text</div>
+            </div>
+        </div>
+        <div class="menu vh-100 bg-gray-100 shadow-lg border-custom z-1 menu d-flex flex-column position-relative">
+           <div class="w-100 px-15 py-20 mt-10 menu-link">
+            <div class="accordion d-flex flex-column gap-5">
+                <div class="accordion-item border-0 bg-transparent">
+                    <div class="accordion-header border-0 d-flex align-items-center" >
+                        <a href="" class="border-0">
+                            <h2>HOTEL</h3>
+                        </a>
+                        <a class="ms-auto collapse-icon collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_1" aria-expanded="true" aria-controls="collapse_6">
+                            <div>
+                                <i class="fi fs-2 text-dark fi fi-rr-angle-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="collapse_1" class="accordion-collapse collapse" >
+                        <div class="accordion-body d-flex flex-column gap-5">
+                            <a href="">
+                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            </a>
+                            <a href="">
+                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            </a>
+                            <a href="">
+                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-lg-6 text-container px-lg-10 p-2 pt-5">
-                    <h2>YOUR CITY CONCIERGE</h2>
-                    <p>
-                        Elevate your stay with Villa Sông’s City Concierge, your dedicated companion for a seamless and enriched urban exploration in Ho Chi Minh City. 
-                        Receive personalized recommendations for hidden gems, vibrant nightlife, and top dining spots, ensuring priority access to the city’s finest establishments. 
-                        Effortlessly navigate the city with our seamless transportation services and benefit from local insights that will connect you with the true essence of Ho Chi Minh City.
-                    </p>
-                    <p>
-                        Experience the city like a local with our tailored guidance as your gateway to a fully personalised and enriched urban adventure.
-                    </p>
-                    <div class="row services">
-                        <div class="col-md-6 text-title">CITY TOUR</div>
-                        <div class="col-md-6 text-title">NIGHTLIFE</div>
-                        <div class="col-md-6 text-title">SPA & WELLNESS</div>
-                        <div class="col-md-6 text-title">ENTERTAINMENT</div>
-                        <div class="col-md-6 text-title">LIMOUSINE SERVICE</div>
-                        <div class="col-md-6 text-title">SHOPPING</div>
-                        <div class="col-md-6 text-title">EVENT PLANNING</div>
-                        <div class="col-md-6 text-title">FOOD & DRINK</div>
+                <div class="accordion-item border-0 bg-transparent">
+                    <div class="accordion-header border-0 d-flex align-items-center" >
+                        <a href="" class="border-0">
+                            <h2>RESTAURANT</h2>
+                        </a>
+                        <a class="ms-auto collapse-icon collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_2" aria-expanded="true" aria-controls="collapse_6">
+                            <div>
+                                <i class="fi fs-2 text-dark fi fi-rr-angle-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="collapse_2" class="accordion-collapse collapse" >
+                        <div class="accordion-body d-flex flex-column gap-5">
+                            <a href="">
+                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            </a>
+                            <a href="">
+                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            </a>
+                            <a href="">
+                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 bg-transparent">
+                    <div class="accordion-header border-0 d-flex align-items-center" >
+                        <a href="" class="border-0">
+                            <h2>VILLA</h2>
+                        </a>
+                        <a class="ms-auto collapse-icon collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_3" aria-expanded="true" aria-controls="collapse_6">
+                            <div>
+                                <i class="fi fs-2 text-dark fi fi-rr-angle-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="collapse_3" class="accordion-collapse collapse" >
+                        <div class="accordion-body d-flex flex-column gap-5">
+                            <a href="">
+                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            </a>
+                            <a href="">
+                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            </a>
+                            <a href="">
+                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-0 bg-transparent">
+                    <div class="accordion-header border-0 d-flex align-items-center" >
+                        <a href="" class="border-0">
+                            <h2>POOL</h2>
+                        </a>
+                        <a class="ms-auto collapse-icon collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_4" aria-expanded="true" aria-controls="collapse_6">
+                            <div>
+                                <i class="fi fs-2 text-dark fi fi-rr-angle-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="collapse_4" class="accordion-collapse collapse" >
+                        <div class="accordion-body d-flex flex-column gap-5">
+                            <a href="">
+                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            </a>
+                            <a href="">
+                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            </a>
+                            <a href="">
+                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+           <div class="mt-auto w-100 d-flex flex-center py-10">
+                <a href="#" class="btn btn-light-primary rounded-pill ls-4 text-uppercase px-15 py-5 fs-5 w-fit">Book Your Stay</a>
+           </div>
+           <div class="position-absolute w-80px aspect-ratio-1 end-0 top-0 d-flex flex-center">
+            <a onclick="toggleMenu()" >
+                <i class="fi fi-rr-cross fs-1 text-primary cursor-pointer"></i>
+            </a>
+           </div>
+        </div>
+    </div>
+
+    <main class="d-flex flex-column">
+        <!-- Slider -->
+        <section class="slide w-100 vh-100 position-relative">
+            <div class="fixed-text position-absolute top-50 start-50 translate-middle z-2 pe-none">
+                <img class="image-container mw-300px" src="assets\image\PALMS VILLA.png" alt="">
+            </div>
+            <div class="slide__track">
+                <ul class="slide__list">
+                    <li class="slide__slide" style="background-image: url('https://byvn.net/E26n');"></li>
+                    <li class="slide__slide" style="background-image: url('https://byvn.net/oHzK');"></li>
+                    <li class="slide__slide" style="background-image: url('https://byvn.net/NDWL');"></li>
+                    <li class="slide__slide" style="background-image: url('https://byvn.net/KV0p');"></li>
+                </ul>
+            </div>
+        </section>
+    
+        <!-- div Content -->
+        <div class="container d-flex flex-column gap-10">
+            <div class="text-center d-flex flex-center">
+                <h1 class="mw-lg-50 mw-75 fw-lighter text-uppercase lh-xl">The hallmark of boutique luxury charm</h1>
+            </div>
+            <div class="mt-2 text-center text-gray-500 d-flex flex-center">
+                <p class="mw-75 ls-3 lh-xxl fst-italic">Experience hospitality that transcends the ordinary – moving beyond conventional services to create tailor-made moments. Immerse in a harmonious blend of sophistication, tailored luxury, and bespoke experiences that will take your stay to new heights</p>
+            </div>
+            <div class="">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column flex-center gap-3 room-hall">
+                            <div class="w-100 overflow-hidden mb-5">
+                                <img src="https://byvn.net/kclw" class="w-100 aspect-ratio-1 img-cover" alt="PALM VILLA NHA TRANG">
+                            </div>
+                            <h4 class="position-relative fw-light ls-3 title" data-text="PALM VILLA NHA TRANG">PALM VILLA NHA TRANG</h4>
+                            <p class="fw-bolder ls-1">HOTELS</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex flex-column flex-center gap-3 room-hall">
+                            <div class="w-100 overflow-hidden mb-5">
+                                <img src="https://byvn.net/y681" class="w-100 aspect-ratio-1 img-cover" alt="SÔMA HIDEAWAYS">
+                            </div>
+                            <h4 class="position-relative fw-light ls-3" data-text="SÔMA HIDEAWAYS">SÔMA HIDEAWAYS</h4>
+                            <p class="fw-bolder ls-1">SUITES</p>
+                        </div>
+                    </div>
+                    <div class="w-100 d-flex justify-content-center">
+                        <a href="#" class="btn btn-light-primary rounded-pill ls-4 text-uppercase px-15 py-5 fs-5">Book Your Stay</a>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-    <!-- Main Content -->
-    <main class="container container-fluid">
-        <div class="my-5 pt-5">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1>YOUR CITY CONCIERGE</h3>
-                    <div class="row d-flex justify-content-center text-center mt-5">
-                        <u class="col-md-3 text-title">CITY TOUR</u>
-                        <u class="col-md-3 text-title">NIGHTLIFE</u>
-                        <u class="col-md-3 text-title">SPA & WELLNESS</u>
-                    </div>                    
-                </div>
-            </div>
-        </div>
-    </main>
-    <!-- Main Content -->
-    <main class="container container-fluid">
-        <div class="my-5 home-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d796.2711971563825!2d109.14999173100077!3d12.267598059582227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31705d883086ba1f%3A0x52f439161701fc89!2sPalm%20Villa!5e0!3m2!1svi!2s!4v1741147444318!5m2!1svi!2s" width="100%" height="700px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <!-- <img src="http://villasong.com/wp-content/uploads/2024/01/6-4.png" alt=""> -->
-        </div>
-    </main>
-    <main class="container container-fluid">
-        <div class="my-5 pt-5">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1>YOUR CITY CONCIERGE</h3>
-                        <div class="row d-flex justify-content-center logo-list mt-5">
-                            <img src="https://villasong.com/wp-content/uploads/2023/11/150x98_LTW.png" alt="">
-                            <img src="https://villasong.com/wp-content/uploads/2023/11/150x98_LTW.png" alt="">
-                            <img src="https://villasong.com/wp-content/uploads/2023/11/150x98_LTW.png" alt="">
-                            <img src="https://villasong.com/wp-content/uploads/2023/11/150x98_LTW.png" alt="">
-                            <img src="https://villasong.com/wp-content/uploads/2023/11/150x98_LTW.png" alt="">
-                            <img src="https://villasong.com/wp-content/uploads/2023/11/condenast-rca.jpg" alt="">
-                        </div>                    
+        <div class="w-100 bg-gray-200">
+            <div class="container">
+                <h2 class="text-center py-20 fw-light ls-4">HOSPITALITY</h2>
+                <div class="row pb-5">
+                    <!-- Restaurant & Bar -->
+                    <div class="col-md-4 my-5">
+                        <div class="position-relative overflow-hidden">
+                            <img class="h-550px" src="https://byvn.net/iXEZ" alt="Restaurant & Bar">
+                            <div class="w-100 d-flex flex-center mt-n10">
+                                <div class="w-70px h-70px w-100 card-icon rounded-circle d-flex flex-center">
+                                    <i class="fi fi-rr-map-point fs-1 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-7 text-center">
+                            <h4 class="fw-lighter ls-4">RESTAURANT & BAR</h4>
+                            <p class="mt-5 text-gray-500">Culinary Symphony at Bistro Sông Vie</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </main>
-        <main class="container-fluid">
-            <div class="my-5 home-map">
-                <iframe id="youtube-video" width="100%" height="700px" 
-                    src="https://www.youtube.com/embed/9UkNgGgK1Wc?enablejsapi=1" 
-                    title="Villa Song Saigon - The Day Dream Destination"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </main>
         
+                    <!-- Banquet & Events -->
+                    <div class="col-md-4 my-5">
+                        <div class="position-relative overflow-hidden">
+                            <img class="h-550px" src="https://byvn.net/y681" alt="Restaurant & Bar">
+                            <div class="w-100 d-flex flex-center mt-n10">
+                                <div class="w-70px h-70px w-100 card-icon rounded-circle d-flex flex-center">
+                                    <i class="fi fi-rr-map-point fs-1 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-7 text-center">
+                            <h4 class="fw-lighter ls-4">RESTAURANT & BAR</h4>
+                            <p class="mt-5 text-gray-500">Culinary Symphony at Bistro Sông Vie</p>
+                        </div>
+                    </div>
+        
+                    <!-- Excursions -->
+                    <div class="col-md-4 my-5">
+                        <div class="position-relative overflow-hidden">
+                            <img class="h-550px" src="https://byvn.net/AOCU" alt="Restaurant & Bar">
+                            <div class="w-100 d-flex flex-center mt-n10">
+                                <div class="w-70px h-70px w-100 card-icon rounded-circle d-flex flex-center">
+                                    <i class="fi fi-rr-map-point fs-1 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-7 text-center">
+                            <h4 class="fw-light ls-4">RESTAURANT & BAR</h4>
+                            <p class="mt-5 text-gray-500">Culinary Symphony at Bistro Sông Vie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- div Content -->
+        <div class="container">
+            <div class="my-5">
+                <div class="row gap-xxl-0 gap-5">
+                    <div class="col-12 col-xxl-7">
+                        <img class="w-100 h-xl-100 img-cover" src="https://byvn.net/3Fk6" alt="City View">
+                    </div>
+                    <div class="col-12 col-xxl-5 text-container px-lg-10 px-5">
+                        <h1 class="fw-lighter ls-4 mb-15 lh-lg text-center text-xxl-start">YOUR CITY CONCIERGE</h1>
+                        <p class="text-gray-600 ls-1 ws-5 lh-xxl fs-5 text-justify mb-15">
+                            Elevate your stay with Villa Sông’s City Concierge, your dedicated companion for a seamless and enriched urban exploration in Ho Chi Minh City. 
+                            Receive personalized recommendations for hidden gems, vibrant nightlife, and top dining spots, ensuring priority access to the city’s finest establishments. 
+                            Effortlessly navigate the city with our seamless transportation services and benefit from local insights that will connect you with the true essence of Ho Chi Minh City.
+                        </p>
+                        <p class="text-gray-600 ls-1 ws-5 lh-xxl fs-5 text-justify">
+                            Experience the city like a local with our tailored guidance as your gateway to a fully personalised and enriched urban adventure.
+                        </p>
+                        <div class="row mt-5">
+                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">CITY TOUR</div>
+                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">NIGHTLIFE</div>
+                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">SPA & WELLNESS</div>
+                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">ENTERTAINMENT</div>
+                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">LIMOUSINE SERVICE</div>
+                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">SHOPPING</div>
+                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">EVENT PLANNING</div>
+                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">FOOD & DRINK</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- div Content -->
+        <div class="container text-center d-flex flex-column gap-10">
+            <h1 class="">YOUR CITY CONCIERGE</h1>  
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d796.2711971563825!2d109.14999173100077!3d12.267598059582227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31705d883086ba1f%3A0x52f439161701fc89!2sPalm%20Villa!5e0!3m2!1svi!2s!4v1741147444318!5m2!1svi!2s" width="100%" height="800px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+        </div>
+        <!-- div Content -->
+        <div class="container text-center d-flex flex-column gap-20">
+            <h2><b>Luxury Awards</b> Winning & Proud <b>Member Of</b></h1>
+            <div class="row w-100 gap-lg-0 gap-20">
+                <div class="col-lg-2 col-12">
+                    <img class="aspect-ratio-1 mw-200px  img-contain" src="https://villasong.com/wp-content/uploads/2023/11/150x98_LTW.png" alt="">
+                </div>
+                <div class="col-lg-2 col-12">
+                    <img class="aspect-ratio-1 mw-200px  img-contain" src="https://villasong.com/wp-content/uploads/2023/11/150x98_LTW.png" alt="">
+                </div>
+                <div class="col-lg-2 col-12">
+                    <img class="aspect-ratio-1 mw-200px  img-contain" src="https://villasong.com/wp-content/uploads/2023/11/150x98_LTW.png" alt="">
+                </div>
+                <div class="col-lg-2 col-12">
+                    <img class="aspect-ratio-1 mw-200px  img-contain" src="https://villasong.com/wp-content/uploads/2023/11/150x98_LTW.png" alt="">
+                </div>
+                <div class="col-lg-2 col-12">
+                    <img class="aspect-ratio-1 mw-200px  img-contain" src="https://villasong.com/wp-content/uploads/2023/11/150x98_LTW.png" alt="">
+                </div>
+                <div class="col-lg-2 col-12">
+                    <img class="aspect-ratio-1 mw-200px  img-contain" src="https://villasong.com/wp-content/uploads/2023/11/150x98_LTW.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="embed-area" class="w-100 embed-area position-relative" style="aspect-ratio: 16/9;">
+            <div class="play-button position-absolute w-100 h-100 d-flex flex-center">
+                <a onclick="embedIframe()">
+                    <i class="fi fi-rr-play-circle"></i>
+                </a>
+            </div>
+            <!--  -->
+            <a href=""></a>
+        </div>
+
+        <div class="container d-flex flex-column gap-20 text-center">
+            <h1>NEWS</h1>
+            <div class="row gap-10 gap-lg-0">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="d-flex flex-column gap-15 text-center border-custom px-0 news-card">
+                        <img class="w-100 aspect-ratio-16x9 img-cover" src="https://byvn.net/zUTA" alt="">
+                        <h4 class="px-lg-20 px-10 lh-lg">LE COURRIER VN: A haven of luxury and tranquility</h4>
+                        <div class="mt-auto w-100 text-center pb-3">
+                            <h6 class="fw-bolder">VIEW</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="d-flex flex-column gap-15 text-center border-custom px-0 news-card">
+                        <img class="w-100 aspect-ratio-16x9 img-cover" src="https://byvn.net/Ilef" alt="">
+                        <h4 class="px-lg-20 px-10 lh-lg">LE COURRIER VN: A haven of luxury and tranquility</h4>
+                        <div class="mt-auto w-100 text-center pb-3">
+                            <h6 class="fw-bolder">VIEW</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="d-flex flex-column gap-15 text-center border-custom px-0 news-card">
+                        <img class="w-100 aspect-ratio-16x9 img-cover" src="https://byvn.net/KhuF" alt="">
+                        <h4 class="px-lg-20 px-10 lh-lg">LE COURRIER VN: A haven of luxury and tranquility</h4>
+                        <div class="mt-auto w-100 text-center pb-3">
+                            <h6 class="fw-bolder">VIEW</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column gap-10 text-center border-top-custom py-20 flex-center mx-5">
+            <h2 class="mb-0 hover-custom" data-text="voquanghuy7879@gmail.com">voquanghuy7879@gmail.com</h1>
+            <h2 class="hover-custom" data-text="+84 905 797 879">+84 905 797 879</h2>
+            <a href="#" class="btn btn-light-primary rounded-pill ls-4 text-uppercase px-15 py-5 fs-5 w-fit">Book Your Stay</a>
+            <p class="w-lg-25 w-100 fs-6 text-gray-600">678 Lương Đình Của<br>Nha Trang<br>Vietnam</p>
+            <div class="social-link d-flex w-lg-50 w-100 gap-lg-10 gap-5 justify-content-center">
+                <div class="w-50px aspect-ratio-1 rounded-circle bg-primary d-flex flex-center">
+                    <i href="#" class="fab fa-facebook fs-1 text-white"></i>
+                </div>
+                <div class="w-50px aspect-ratio-1 rounded-circle bg-primary d-flex flex-center">
+                    <i href="#" class="fab fa-google fs-1 text-white"></i>
+                </div>
+                <div class="w-50px aspect-ratio-1 rounded-circle bg-primary d-flex flex-center">
+                    <i href="#" class="fab fa-instagram fs-1 text-white"></i>
+                </div>
+                <div class="w-50px aspect-ratio-1 rounded-circle bg-primary d-flex flex-center">
+                    <i href="#" class="fab fa-tiktok fs-1 text-white"></i>
+                </div>
+                <div class="w-50px aspect-ratio-1 rounded-circle bg-primary d-flex flex-center">
+                    <i href="#" class="fab fa-linkedin fs-1 text-white"></i>
+                </div>
+                <div class="w-50px aspect-ratio-1 rounded-circle bg-primary d-flex flex-center">
+                    <i href="#" class="fab fa-youtube fs-1 text-white"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="px-5">
+        <div class="border-top-custom px-10 py-5 d-flex justify-content-between text-uppercase flex-lg-row flex-column gap-lg-0 gap-10">
+            <div class="d-flex w-100 gap-10 flex-lg-row flex-column">
+                <a class="text-lg-start text-center" href="">ABOUT</a>
+                <a class="text-lg-start text-center" href="">Newsroom</a>
+                <a class="text-lg-start text-center" href="">Offers</a>
+                <a class="text-lg-start text-center" href="">Press</a>
+                <a class="text-lg-start text-center" href="">Corporate Governance</a>
+                <a class="text-lg-start text-center" href="">Contact</a>
+            </div>
+            <div class="d-flex w-100 justify-content-end gap-10 flex-lg-row flex-column">
+                <a class="text-lg-start text-center" href="">ABOUT</a>
+                <a class="text-lg-start text-center" href="">Newsroom</a>
+                <a class="text-lg-start text-center" href="">Offers</a>
+            </div>
+        </div>
+        <div class="w-100 px-10 pb-5">
+            <p class="fs-6 text-gray-600">© Palm Villa 2025 </p>
+        </div>
+
+    </footer>
     <!-- Import Bootstrap JS -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
