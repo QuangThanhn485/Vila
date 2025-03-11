@@ -48604,6 +48604,6 @@ body.page-bg-image-lg {
   .w-fit{
     width: fit-content
   }
-  .border-custom-dark{
-    border: 1px solid #181C32 !important;
+  .border-custom-gray{
+    border: 1px solid var(--bs-gray-300) !important;
   }
