@@ -83,8 +83,6 @@ body, html {
     text-orientation: mixed;
     white-space: nowrap;
 }
-
-
 main{
     gap:100px;
 }
@@ -121,7 +119,7 @@ main,footer{
 }
 .embed-area
 {
-    background-image: url(https://byvn.net/X66O) ;
+    background-image: url(/assets/image/module/img8.jpg) ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
