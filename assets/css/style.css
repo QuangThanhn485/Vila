@@ -159,10 +159,22 @@ main,footer{
 .social-link div:hover{
     scale: 1.1;
 }
+/* .language-area{
+    top: 20px;
+    right: 100px;
+} */
+.language-area{
+    top: 11vh;
+    right: 15px;
+}
 @media (min-width: 992px) {
     main,footer{
         margin-left: 80px;
     }
+    /* .language-area{
+        top: 10vh;
+        right: 1vw;
+    } */
 }
 .news-card{
     transition: all ease .3s;
@@ -184,9 +196,14 @@ main,footer{
     overflow-x: hidden;
 }
 .float-button{
-    top: 1.5vh;
-    right: 3vw;
+    top: 2vh;
+    right: 1vw;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.741) !important;
     transition: all 0.3s ease;
+}
+
+.dropdown-toggle,.dropdown-menu {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.741) !important;
 }

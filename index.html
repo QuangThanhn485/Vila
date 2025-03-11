@@ -21,20 +21,31 @@
 </head>
 <body>
     <!-- Sidebar -->
-    <div class="top-0 end-0 z-4 d-flex flex-column flex-center gap-3 px-5 py-2 position-fixed z-5">
-        <a href="">
-            <img class="w-20px" src="https://cdn.gtranslate.net/flags/svg/vi.svg" alt="" srcset="">
-        </a>
-        <a href="">
-            <img class="w-20px" src="https://cdn.gtranslate.net/flags/svg/en.svg" alt="" srcset="">
-        </a>
-        <a href="">
-            <img class="w-20px" src="https://cdn.gtranslate.net/flags/svg/ko.svg" alt="" srcset="">
-        </a>
+    <div class="z-4 d-flex flex-column flex-center gap-3 py-2 position-fixed z-5 language-area">
+        <div class="dropdown">
+            <a class="dropdown-toggle bg-light px-5 py-2 border-custom rounded-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="w-20px pe-2" src="https://cdn.gtranslate.net/flags/svg/en.svg" alt="" srcset="">
+                English
+            </a>
+            <div class="dropdown-menu border-custom rounded-2 px-5" aria-labelledby="dropdownMenuButton">
+                <a class="d-block py-2" href="">
+                    <img class="w-20px pe-2" src="https://cdn.gtranslate.net/flags/svg/vi.svg" alt="" srcset="">
+                    Tiếng việt
+                </a>
+                <a class="d-block py-2" href="">
+                    <img class="w-20px pe-2" src="https://cdn.gtranslate.net/flags/svg/en.svg" alt="" srcset="">
+                    English
+                </a>
+                <a class="d-block py-2" href="">
+                    <img class="w-20px pe-2" src="https://cdn.gtranslate.net/flags/svg/ko.svg" alt="" srcset="">
+                    한국인
+                </a>
+            </div>
+        </div>
     </div>
-    <div class="header-bar w-100 bg-primary py-5 px-10 d-flex d-lg-none position-fixed top-0 z-4">
+    <div class="header-bar w-100 bg-primary py-5 px-6 d-flex d-lg-none position-fixed top-0 z-4">
         <img src="assets/image/PALMS VILLA.png" class="w-100 mw-80px" alt="" srcset="">
-        <div class="ms-auto d-flex flex-center pe-8 cursor-pointer">
+        <div class="ms-auto d-flex flex-center cursor-pointer">
             <a onclick="toggleMenu()" >
                 <i class="fi fi-rr-menu-burger fs-3qx text-light"></i>
             </a>
@@ -53,12 +64,12 @@
             </div>
         </div>
         <div class="menu vh-100 bg-gray-100 shadow-lg border-custom z-1 menu d-flex flex-column position-relative">
-           <div class="w-100 px-15 py-20 mt-10 menu-link">
+           <div class="w-100 px-15 pb-20 mt-20 menu-link">
             <div class="accordion d-flex flex-column gap-5">
                 <div class="accordion-item border-0 bg-transparent">
                     <div class="accordion-header border-0 d-flex align-items-center" >
-                        <a href="" class="border-0">
-                            <h2>HOTEL</h3>
+                        <a href="" class="border-0 ">
+                            <h2 class="">HOTEL</h3>
                         </a>
                         <a class="ms-auto collapse-icon collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_1" aria-expanded="true" aria-controls="collapse_6">
                             <div>
@@ -68,22 +79,22 @@
                     </div>
                     <div id="collapse_1" class="accordion-collapse collapse" >
                         <div class="accordion-body d-flex flex-column gap-5">
-                            <a href="">
-                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            <a class="" href="">
+                                <h5 class="text-gray-700">PALM VILLA NHATRANG</h5>
                             </a>
-                            <a href="">
-                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            <a class="" href="">
+                                <h5 class="text-gray-700">PALM VILLA NHATRANG</h5>
                             </a>
-                            <a href="">
-                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            <a class="" href="">
+                                <h5 class="text-gray-700">PALM VILLA NHATRANG</h5>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item border-0 bg-transparent">
                     <div class="accordion-header border-0 d-flex align-items-center" >
-                        <a href="" class="border-0">
-                            <h2>RESTAURANT</h2>
+                        <a href="" class="border-0 ">
+                            <h2 class="">RESTAURANT</h2>
                         </a>
                         <a class="ms-auto collapse-icon collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_2" aria-expanded="true" aria-controls="collapse_6">
                             <div>
@@ -93,22 +104,22 @@
                     </div>
                     <div id="collapse_2" class="accordion-collapse collapse" >
                         <div class="accordion-body d-flex flex-column gap-5">
-                            <a href="">
-                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            <a class="" href="">
+                                <h5 class="text-gray-700">PALM VILLA NHATRANG</h5>
                             </a>
-                            <a href="">
-                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            <a class="" href="">
+                                <h5 class="text-gray-700">PALM VILLA NHATRANG</h5>
                             </a>
-                            <a href="">
-                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            <a class="" href="">
+                                <h5 class="text-gray-700">PALM VILLA NHATRANG</h5>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item border-0 bg-transparent">
                     <div class="accordion-header border-0 d-flex align-items-center" >
-                        <a href="" class="border-0">
-                            <h2>VILLA</h2>
+                        <a href="" class="border-0 ">
+                            <h2 class="">VILLA</h2>
                         </a>
                         <a class="ms-auto collapse-icon collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_3" aria-expanded="true" aria-controls="collapse_6">
                             <div>
@@ -118,22 +129,22 @@
                     </div>
                     <div id="collapse_3" class="accordion-collapse collapse" >
                         <div class="accordion-body d-flex flex-column gap-5">
-                            <a href="">
-                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            <a class="" href="">
+                                <h5 class="text-gray-700">PALM VILLA NHATRANG</h5>
                             </a>
-                            <a href="">
-                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            <a class="" href="">
+                                <h5 class="text-gray-700">PALM VILLA NHATRANG</h5>
                             </a>
-                            <a href="">
-                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            <a class="" href="">
+                                <h5 class="text-gray-700">PALM VILLA NHATRANG</h5>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item border-0 bg-transparent">
                     <div class="accordion-header border-0 d-flex align-items-center" >
-                        <a href="" class="border-0">
-                            <h2>POOL</h2>
+                        <a href="" class="border-0 ">
+                            <h2 class="">POOL</h2>
                         </a>
                         <a class="ms-auto collapse-icon collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_4" aria-expanded="true" aria-controls="collapse_6">
                             <div>
@@ -143,14 +154,14 @@
                     </div>
                     <div id="collapse_4" class="accordion-collapse collapse" >
                         <div class="accordion-body d-flex flex-column gap-5">
-                            <a href="">
-                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            <a class="" href="">
+                                <h5 class="text-gray-700">PALM VILLA NHATRANG</h5>
                             </a>
-                            <a href="">
-                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            <a class="" href="">
+                                <h5 class="text-gray-700">PALM VILLA NHATRANG</h5>
                             </a>
-                            <a href="">
-                                <h4 class="text-gray-700">PALM VILLA NHATRANG</h4>
+                            <a class="" href="">
+                                <h5 class="text-gray-700">PALM VILLA NHATRANG</h5>
                             </a>
                         </div>
                     </div>
@@ -290,14 +301,14 @@
                             Experience the city like a local with our tailored guidance as your gateway to a fully personalised and enriched urban adventure.
                         </p>
                         <div class="row mt-5">
-                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">CITY TOUR</div>
-                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">NIGHTLIFE</div>
-                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">SPA & WELLNESS</div>
-                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">ENTERTAINMENT</div>
-                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">LIMOUSINE SERVICE</div>
-                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">SHOPPING</div>
-                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">EVENT PLANNING</div>
-                            <div class="col-md-6 my-2 fs-4 ls-1 fw-bolder">FOOD & DRINK</div>
+                            <div class="col-6 my-2 fs-4 ls-1 fw-bolder">CITY TOUR</div>
+                            <div class="col-6 my-2 fs-4 ls-1 fw-bolder">NIGHTLIFE</div>
+                            <div class="col-6 my-2 fs-4 ls-1 fw-bolder">SPA & WELLNESS</div>
+                            <div class="col-6 my-2 fs-4 ls-1 fw-bolder">ENTERTAINMENT</div>
+                            <div class="col-6 my-2 fs-4 ls-1 fw-bolder">LIMOUSINE SERVICE</div>
+                            <div class="col-6 my-2 fs-4 ls-1 fw-bolder">SHOPPING</div>
+                            <div class="col-6 my-2 fs-4 ls-1 fw-bolder">EVENT PLANNING</div>
+                            <div class="col-6 my-2 fs-4 ls-1 fw-bolder">FOOD & DRINK</div>
                         </div>
                     </div>
                 </div>
