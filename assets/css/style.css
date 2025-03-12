@@ -1,12 +1,18 @@
 :root {
     --bar-width: 80px;
 }
-body, html {
+html {
     margin: 0;
     padding: 0;
     height: auto;
-    overflow: auto;
+    /* overflow-y: scroll; */
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: auto;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .slide {
